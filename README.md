@@ -11,5 +11,5 @@ python split_data.py
 
 ## Training
 ```
-bash run_example.sh
+bash DR/run_example.sh
 ```
