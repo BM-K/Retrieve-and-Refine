@@ -2,7 +2,7 @@
 
 ## Dataset
 ```
-[REDDIT to DataBase]
+[REDDIT DataBase]
 python PseudoLabeling.py
 
 [Dataset Parsing]
