@@ -63,7 +63,8 @@ with open(corpus_data_path, "r", encoding="utf-8") as file:
     lines = csv.reader(file, delimiter="\t", quotechar='"')
     for line in lines:
         query_prime, response_prime = line
-        corpus.append(response_prime)
+        # corpus.append(response_prime)
+        corpus.append(query_prime + " [SEP] " + response_prime)
 
 top_k = 10
 hard_label = 1
