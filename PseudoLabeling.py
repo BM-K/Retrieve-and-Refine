@@ -3,8 +3,8 @@ import torch
 import random
 import numpy as np
 from tqdm import tqdm
-from transformers import AutoModel, AutoTokenizer
 from sentence_transformers import util
+from transformers import AutoModel, AutoTokenizer
 
 seed = 1234
 
@@ -63,7 +63,6 @@ with open(corpus_data_path, "r", encoding="utf-8") as file:
     lines = csv.reader(file, delimiter="\t", quotechar='"')
     for line in lines:
         query_prime, response_prime = line
-        # corpus.append(response_prime)
         corpus.append(query_prime + " [SEP] " + response_prime)
 
 top_k = 10
@@ -165,3 +164,39 @@ with open(corpus_data_path, "w", encoding="utf-8") as file:
         current_response.append(query)
 
         tsv_writer.writerow(current_response)
+
+import csv
+
+train_data_path = 'train_dataset.tsv'
+memory_data = []
+
+with open(train_data_path, "r", encoding="utf-8") as file:
+    lines = file.readlines()
+    train_file_len = int(len(lines) * 0.9)
+    valid_file_len = int(len(lines) * 0.05)
+
+    for line in lines:
+        memory_data.append(line)
+
+train_set = memory_data[:train_file_len]
+valid_set = memory_data[train_file_len:train_file_len+valid_file_len]
+test_set = memory_data[train_file_len+valid_file_len:]
+print(f"Train: {len(train_set)} | Validation: {len(valid_set)} | Test: {len(test_set)}")
+
+with open('train.tsv', "w", encoding="utf-8") as file:
+    tsv_writer = csv.writer(file, delimiter='\t')
+    for line in train_set:
+        query, response, search_idx, label = line.split('\t')
+        tsv_writer.writerow([query.strip(), response.strip(), search_idx.strip(), label.strip()])
+
+with open('valid.tsv', "w", encoding="utf-8") as file:
+    tsv_writer = csv.writer(file, delimiter='\t')
+    for line in valid_set:
+        query, response, search_idx, label = line.split('\t')
+        tsv_writer.writerow([query.strip(), response.strip(), search_idx.strip(), label.strip()])
+
+with open('test.tsv', "w", encoding="utf-8") as file:
+    tsv_writer = csv.writer(file, delimiter='\t')
+    for line in test_set:
+        query, response, search_idx, label = line.split('\t')
+        tsv_writer.writerow([query.strip(), response.strip(), search_idx.strip(), label.strip()])
