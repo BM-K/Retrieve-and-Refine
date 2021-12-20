@@ -3,10 +3,6 @@
 ## Dataset
 ```
 [REDDIT DataBase]
-python PseudoLabeling.py
-
-[Dataset Parsing]
-python split_data.py
 ```
 
 ## Training
