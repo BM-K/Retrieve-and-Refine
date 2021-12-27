@@ -7,5 +7,5 @@
 
 ## Training
 ```
-bash DR/run_example.sh
+[Training]
 ```
