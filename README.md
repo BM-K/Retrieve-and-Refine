@@ -11,8 +11,8 @@ We have re-uploaded this code
 [Training]
 ```
 ## ToDo
+- [X] Entropy
 - [ ] FiD + Alp
 - [ ] Alp
 - [ ] FiD
 - [ ] BART FiD
-- [ ] Entropy
