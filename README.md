@@ -10,3 +10,9 @@ We have re-uploaded this code
 ```
 [Training]
 ```
+## ToDo
+- [ ] FiD + Alp
+- [ ] Alp
+- [ ] FiD
+- [ ] BART FiD
+- [ ] Entropy
