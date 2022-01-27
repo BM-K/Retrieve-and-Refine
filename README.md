@@ -12,6 +12,7 @@ We have re-uploaded this code
 ```
 ## ToDo
 - [X] Entropy
+- [ ] weibo, pr-chat
 - [ ] FiD + Alp
 - [ ] Alp
 - [ ] FiD
