@@ -13,7 +13,7 @@ We have re-uploaded this code
 ## ToDo
 - [X] Entropy
 - [ ] weibo, pr-chat
-- [ ] FiD + Alp
-- [ ] Alp
-- [ ] FiD
-- [ ] BART FiD
+- [X] FiD + Alp
+- [X] Alp
+- [X] FiD
+- [X] BART FiD
