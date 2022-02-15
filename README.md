@@ -39,7 +39,5 @@ We have re-uploaded this code
 ## ToDo
 - [X] Entropy
 - [ ] weibo, pr-chat
-- [X] FiD + Alp
-- [X] Alp
-- [X] FiD
+- [X] FiD, Alp
 - [X] BART FiD
