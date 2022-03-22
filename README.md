@@ -1,14 +1,10 @@
 # Retrieve and Refine
-We have re-uploaded this code
 
 ## Dataset
 ```
-[REDDIT DataBase]
-```
-
-## Training
-```
-[Training]
+[Reddit DataBase]
+[PER-CHAT DataBase]
+[Weibo DataBase]
 ```
 
 ## Results
@@ -38,6 +34,6 @@ We have re-uploaded this code
 
 ## ToDo
 - [X] Entropy
-- [ ] weibo, pr-chat
+- [X] weibo, pr-chat
 - [X] FiD, Alp
 - [X] BART FiD
