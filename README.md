@@ -2,7 +2,5 @@
 
 ## Dataset
 ```
-[Reddit DataBase]
-[PER-CHAT DataBase]
-[Weibo DataBase]
+[AI-Hub DataBase]
 ```
